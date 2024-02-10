@@ -1,0 +1,9 @@
+NVIM v0.9.4
+fzf 0.29 (devel)
+tmux
+brightnessctl
+rclone
+obsidian
+rgrep
+libinput-gestures
+...
