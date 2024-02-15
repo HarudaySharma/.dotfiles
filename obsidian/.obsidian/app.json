@@ -1,0 +1,21 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "Resource Cluster",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "spellcheck": false,
+  "propertiesInDocument": "source",
+  "defaultViewMode": "source",
+  "showLineNumber": true,
+  "showUnsupportedFiles": true,
+  "vimMode": true,
+  "livePreview": true,
+  "readableLineLength": true
+}

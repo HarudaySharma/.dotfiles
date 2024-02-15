@@ -1,0 +1,252 @@
+{
+  "main": {
+    "id": "dda411f68857a15e",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffe895cbef759c22",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7dfaa632801e935c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2024-01-08.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1d15694a35951541",
+    "type": "split",
+    "children": [
+      {
+        "id": "c15a9842b8382a69",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c06d6ab8c7b965c6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime"
+              }
+            }
+          },
+          {
+            "id": "eb1964b24bdfcc62",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8d10f05a65887689",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 287,
+    "collapsed": true
+  },
+  "right": {
+    "id": "8d4f179bdce6ece6",
+    "type": "split",
+    "children": [
+      {
+        "id": "3d858c577f314b5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d3e3ce5aa087fb5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2024-01-08.md"
+              }
+            }
+          },
+          {
+            "id": "7b3d1e0640e1312a",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "6649c4b549e0dfa2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2024-01-08.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e6cf1a874a3d9fe1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2024-01-08.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "24d41f1d3945da31",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9c43c73e71f7a862",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "d2a96f24933b63f1",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "2024-01-08.md"
+              }
+            }
+          },
+          {
+            "id": "81d78b40cc013422",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "ec0c284a66cdf4c0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Object Oriented Sofware Engineering/Resource Bank/m02L03.pdf"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 447.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "7dfaa632801e935c",
+  "lastOpenFiles": [
+    "Computer System Architecture/Page of Content.md",
+    "Computer System Architecture/What will be studying.md",
+    "2024-02-15.md",
+    "Resource Cluster/Pasted image 20240214174949.jpg",
+    "Requirement elicitation and Analysis process.md",
+    "Req Validation.md",
+    "Req Validation Techniques.md",
+    "Test Case Generation.md",
+    "Prototyping.md",
+    "Req review.md",
+    "Req classification & organization.md",
+    "Req discovery.md",
+    "Example of Use Case Diagram.md",
+    "2024-01-08.md",
+    "Clock.md",
+    "2024-02-06.md",
+    "Von-Neumann-Architecture.md",
+    "2024-02-13.md",
+    "Revision.md",
+    "Computer System Architecture/Untitled 1.md",
+    "2024-02-07.md",
+    "2024-02-08.md",
+    "2024-02-01.md",
+    "Computer System Architecture/Basic Computer Organization.md",
+    "Computer System Architecture/Computer Instruction.md",
+    "Computer System Architecture/Instruction codes.md",
+    "Computer System Architecture/Program.md",
+    "Object Oriented Sofware Engineering/Resource Bank/Pasted image 20240129171409.png",
+    "Object Oriented Sofware Engineering/Resource Bank/Pasted image 20240129172610.png",
+    "Object Oriented Sofware Engineering/Resource Bank/Pasted image 20240129172238.png",
+    "Object Oriented Sofware Engineering/Resource Bank/Pasted image 20240129171930.png",
+    "Computer System Architecture/Resource Bank/Pasted image 20240214103121.png",
+    "Computer System Architecture/Resource Bank/Pasted image 20240214103250.png",
+    "Computer System Architecture/Resource Bank/Pasted image 20240214104241.png",
+    "Computer System Architecture/Resource Bank/Pasted image 20240214104814.png",
+    "Computer System Architecture/Resource Bank/Pasted image 20240214110340.png",
+    "Computer System Architecture/Resource Bank/Computer System Architecture 3rd Edition-M Morris Mano.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m02L03.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m01L02.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m01L01.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m05L12.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m05L11.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m05L10.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m04L09.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/m04L08.pdf",
+    "Object Oriented Sofware Engineering/Resource Bank/OOSE1.pptx",
+    "Untitled.canvas"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "file:basics",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#underSchema  ",
+      "color": {
+        "a": 1,
+        "rgb": 5504804
+      }
+    },
+    {
+      "query": "tag:#relationalAlgebraOperationTypes  ",
+      "color": {
+        "a": 1,
+        "rgb": 2390271
+      }
+    },
+    {
+      "query": "tag:#basicOperationsRA  ",
+      "color": {
+        "a": 1,
+        "rgb": 16269184
+      }
+    },
+    {
+      "query": "tag:#derivedOperationsRA  ",
+      "color": {
+        "a": 1,
+        "rgb": 16714381
+      }
+    },
+    {
+      "query": "tag:#innerJoinTypes  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    },
+    {
+      "query": "tag:#outerJoinTypes  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "tag:#joinOperationsTypes  ",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -0.1,
+  "nodeSizeMultiplier": 1.00155925155925,
+  "lineSizeMultiplier": 1.14417879417879,
+  "collapse-forces": false,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 163,
+  "scale": 0.18353931971597087,
+  "close": true
+}

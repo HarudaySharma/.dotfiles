@@ -1,2 +1,2 @@
-map j <Up>
-map k <Down>
+"map j <Up>
+"map k <Down>
