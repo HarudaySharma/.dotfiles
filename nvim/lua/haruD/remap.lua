@@ -17,11 +17,6 @@ vim.g.mapleader = " "
 
 vim.keymap.set({"n", "v"}, "E", "$")
 
-vim.keymap.set({"n", "v"}, "<leader>o", 'o<Esc>0')
-vim.keymap.set({"n", "v"}, "<leader>O", 'O<Esc>0')
--- vim.keymap.set({"n", "v"}, "<leader>o", 'o<Esc>0"_D')
--- vim.keymap.set({"n", "v"}, "<leader>O", 'O<Esc>0"_D')
-
 vim.keymap.set({"n", "v"}, "<leader>F", vim.cmd.Format)
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
