@@ -1,6 +1,7 @@
 - NVIM v0.9.4
 - fzf 0.29 (devel)
 - tmux
+- gitui
 - brightnessctl
 - sct
 - rclone

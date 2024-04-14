@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/projects ~/Documents/MasterVault/  ~/Documents/  ~/work ~/personal  ~   -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/projects ~/Documents/MasterVault/ ~/Documents/ ~/work ~/personal  ~/personal/* ~   -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
@@ -14,29 +14,30 @@ selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 
+echo $selected_name
 if [[ ! -z $TMUX ]]; then 
 
 		echo in tmux
-	if  tmux has-session -t=$selected_name; then
+	if  tmux has-session -t="${selected_name}"; then
 		echo session-found
-		tmux switch -t=$selected_name
+		tmux switch -t="${selected_name}"
 	else 
 		echo session not found
-		tmux new-session -ds $selected_name -c $selected
-		tmux switch-client -t=$selected_name
+		tmux new-session -ds "${selected_name}" -c "${selected}"
+		tmux switch-client -t="${selected_name}"
 	fi
 else
 	echo not in tmux
 	if [[ ! -z $tmux_running ]]; then
-		if   tmux has-session -t=$selected_name; then
-			tmux attach -t $selected_name 
+		if   tmux has-session -t="${selected_name}"; then
+			tmux attach -t "${selected_name}" 
 		else
-			tmux new-session -ds $selected_name -c $selected
-			tmux attach -t $selected_name 
+			tmux new-session -ds "${selected_name}" -c "${selected}"
+			tmux attach -t "${selected_name}"
 		fi
 	else
-		tmux new-session -ds $selected_name -c $selected
-		tmux attach -t $selected_name 
+		tmux new-session -ds "${selected_name}" -c "${selected}"
+		tmux attach -t "${selected_name}"
 	fi
 fi
 	
@@ -51,3 +52,4 @@ fi
 #fi
 
 #tmux switch-client -t $selected_name
+
