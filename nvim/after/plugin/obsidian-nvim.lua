@@ -1,4 +1,4 @@
-require("obsidian").setup({
+--[[ require("obsidian").setup({
     workspaces = {
         {
             name = "MasterVault",
@@ -29,4 +29,5 @@ require("obsidian").setup({
     preferred_link_style = "wiki",
     -- see below for full list of options 👇
 })
+]]--
 

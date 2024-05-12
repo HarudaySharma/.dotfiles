@@ -8,3 +8,4 @@
 - obsidian
 - rgrep
 - libinput-gestures
+- ani-cli
