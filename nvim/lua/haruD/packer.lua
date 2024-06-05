@@ -21,9 +21,11 @@ return require('packer').startup(function(use)
         end
     })
 
+
     use({
-        "folke/trouble.nvim",
-        requires = { 'nvim-tree/nvim-web-devicons' }
+        "folke/trouble.nvim", tag = 'v2.10.0',
+        opts = {},
+        requires = { 'nvim-tree/nvim-web-devicons' },
     })
 
     use({
@@ -34,6 +36,14 @@ return require('packer').startup(function(use)
                 -- Configuration here, or leave empty to use defaults
             })
         end
+    })
+
+    use({
+        "folke/todo-comments.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+        opts = {
+            -- your configuration comes here
+        }
     })
 
     use { 'numToStr/Comment.nvim' }
@@ -59,6 +69,7 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
+
     use({
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",

@@ -87,9 +87,9 @@ ins_left {
 }
 
 ins_left {
-    'filename',
+    '%f',
     cond = conditions.buffer_not_empty,
-    color = { fg = colors.violet, gui = 'bold' },
+    color = { fg = colors.fg, gui = 'bold' },
 }
 
 --[[ ins_left {
@@ -98,7 +98,7 @@ ins_left {
     cond = conditions.buffer_not_empty,
 } ]]
 
-ins_left {
+--[[ ins_left {
     'diagnostics',
     sources = { 'nvim_diagnostic' },
     symbols = { error = ' ', warn = ' ', info = ' ' },
@@ -107,11 +107,11 @@ ins_left {
         color_warn = { fg = colors.yellow },
         color_info = { fg = colors.cyan },
     },
-}
+} ]]
 
 ins_left {
     'branch',
-    icon = '',
+    icon = '',
     color = { fg = colors.red, gui = 'bold' },
 }
 
@@ -136,10 +136,9 @@ ins_right {
     fmt = string.upper,
     icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
     color = { fg = colors.green, gui = 'bold' },
-}
-]]
+} ]]
 
-ins_right {
+--[[ ins_right {
     'diff',
     -- Is it me or the symbol for modified us really weird
     symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
@@ -149,7 +148,7 @@ ins_right {
         removed = { fg = colors.red },
     },
     cond = conditions.hide_in_width,
-}
+} ]]
 
 ins_right {
     function()

@@ -1,0 +1,1 @@
+require("haruD.misc.yank")
