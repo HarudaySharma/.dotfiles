@@ -1,0 +1,21 @@
+/* styling for highlighted text */
+.markdown-preview-view mark,
+span.cm-highlight {
+    background-color: rgb(146, 111, 175) !important;
+    /*color: black !important;*/
+    padding: 0.1em;
+}
+
+/* Different color for bold*/
+.cm-strong,
+.markdown-preview-section strong {
+    color : #0AFED5D6 !important; /*teal*/
+    /* color: #46FEA5D4 !important;  // green*/
+    /* color: #BB29BB !important; // purple */
+}
+
+/* Different color for italic */
+.cm-em,
+.markdown-preview-view em {
+    color: #cc241d;
+}

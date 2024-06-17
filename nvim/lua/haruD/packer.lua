@@ -23,7 +23,8 @@ return require('packer').startup(function(use)
 
 
     use({
-        "folke/trouble.nvim", tag = 'v2.10.0',
+        "folke/trouble.nvim",
+        tag = 'v2.10.0',
         opts = {},
         requires = { 'nvim-tree/nvim-web-devicons' },
     })
@@ -44,6 +45,11 @@ return require('packer').startup(function(use)
         opts = {
             -- your configuration comes here
         }
+    })
+
+    use({
+        'echasnovski/mini.nvim',
+        version = 'stable'
     })
 
     use { 'numToStr/Comment.nvim' }
@@ -81,7 +87,13 @@ return require('packer').startup(function(use)
     })
 
     use("nvim-treesitter/playground")
-    use("theprimeagen/harpoon")
+
+    use({
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    })
+
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");

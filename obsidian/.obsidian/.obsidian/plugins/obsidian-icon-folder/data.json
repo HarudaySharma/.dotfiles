@@ -1,0 +1,44 @@
+{
+  "settings": {
+    "migrated": 4,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "none",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiLink2Off",
+      "LiUnlink",
+      "LiNotebook",
+      "LiBookCopy",
+      "LiDatabase"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":"
+  },
+  "01 - Computer System Architecture": "LiComputer",
+  "02 - Machine Learning": {
+    "iconName": "CuMachineLearning01SvgrepoCom",
+    "iconColor": "#54b6f8"
+  },
+  "32 - Daily": "LiCalendarDays",
+  "00 - Map of Content": "IbTreeMapDown",
+  "05 - Data Structures": "LiGraduationCap",
+  "06 - Excalidraw": "LiPencil",
+  "49 - Resource Cluster": "LiDatabase",
+  "04 - Backend Engineering": "LiBookCopy",
+  "03 - Object Oriented Sofware Engineering": "LiNotebook",
+  "xx - Orphans": "LiLink2Off"
+}
