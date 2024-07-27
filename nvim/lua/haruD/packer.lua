@@ -98,6 +98,25 @@ return require('packer').startup(function(use)
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");
 
+    -- -- for java
+    -- use({
+    --     "/mfussenegger/nvim-jdtls",
+    --     dependencies = {
+    --         "mfussenegger/nvim-dap",
+    --     }
+    -- })
+    --
+    -- use({
+    --     "jay-babu/mason-nvim-dap.nvim",
+    --     config = function()
+    --         -- ensure the java debug adapter is installed
+    --         require("mason-nvim-dap").setup({
+    --             ensure_installed = { "java-debug-adapter", "java-test" }
+    --         })
+    --     end
+    -- })
+    -- -----
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
