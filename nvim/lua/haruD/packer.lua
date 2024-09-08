@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+    use { "folke/tokyonight.nvim", }
+    use { "ellisonleao/gruvbox.nvim" }
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -77,6 +79,15 @@ return require('packer').startup(function(use)
     })
 
     use({
+        'MeanderingProgrammer/render-markdown.nvim',
+        after = { 'nvim-treesitter' },
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    })
+
+    use({
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",
         setup = function()
@@ -86,17 +97,19 @@ return require('packer').startup(function(use)
         ft = { "markdown" },
     })
 
-    use("nvim-treesitter/playground")
-
     use({
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
         requires = { { "nvim-lua/plenary.nvim" } }
     })
 
+    use({ "stevearc/oil.nvim" })
+
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");
+
+
 
     -- -- for java
     -- use({
