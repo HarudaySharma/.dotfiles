@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brightnessctl -qd "amdgpu_bl0" set 5$1  
+brightnessctl -qd "amdgpu_bl*" set 5$1
 clear
 brightnessctl info | head -n 2 | tail -n 1 | sed 's/\t//g'
 
