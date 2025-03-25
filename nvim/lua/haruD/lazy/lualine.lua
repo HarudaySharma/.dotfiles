@@ -164,6 +164,18 @@ return {
             padding = { left = 0 },
         }
 
+        ins_left {
+            '%=',         -- make the indicator center
+            {
+                "harpoon2",
+                icon = '♥',
+                indicators = { "a", "s", "q", "w" },
+                active_indicators = { "A", "S", "Q", "W" },
+                _separator = " ",
+            }
+        }
+
+
         -- Now don't forget to initialize lualine
         lualine.setup(config)
     end
