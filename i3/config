@@ -24,7 +24,7 @@ font pango:UbuntuMono Nerd Font Mono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec ~/.local/kitty.app/bin/kitty
 
 # kill focused window
 bindsym $mod+x kill
@@ -137,18 +137,18 @@ mode "resize" {
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
-        bindsym l resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym h resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym j resize shrink height 5 px or 5 ppt
+        bindsym h resize grow width 5 px or 5 ppt
         bindsym f resize set 1920 px 1070 px, move position center, mode "default"
         # Pressing down will grow the window’s height.
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -226,7 +226,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id gnome-screenshot -w
 
 
 # Suspend
-bindsym $mod+Shift+period exec systemctl suspend
+bindsym $mod+Shift+period exec ~/.config/i3/i3lock.sh & systemctl suspend
 
 # for not showing the borders and related text around the windows
 for_window [class=".*"] border none
@@ -238,8 +238,21 @@ exec --no-startup-id ~/.dotfiles/battery_alert/battery_alert.sh &
 
 # wallpaper
 exec --no-startup-id picom --experimental-backends
-exec --no-startup-id feh --bg-scale ~/Pictures/Walls/UraharaKisuke.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/Walls/eva.png
 
 # # ssh-agent auto start
 exec --no-startup-id ./start-ssh.sh
+
+exec --no-startup-id xautolock \
+    -time 5 -locker "~/.config/i3/i3lock.sh" \
+    -notify 10 -notifier "brightnessctl set 0%" \
+    -corners +000 \
+    -cornerdelay 10 \
+    -cornerredelay 10 \
+    -cornerlock
+
+# prevents screen turning off after few minutes of input inactivity.
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
 
