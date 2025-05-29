@@ -2,7 +2,10 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
+        {
+            "williamboman/mason-lspconfig.nvim",
+            version = "v1.32.0",
+        },
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
@@ -24,7 +27,15 @@ return {
 
 
         require("fidget").setup({})
-        require("mason").setup()
+        require("mason").setup({
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗"
+                }
+            }
+        })
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "clangd",
@@ -36,6 +47,7 @@ return {
                 -- "tsserver",
             },
             handlers = {
+
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
