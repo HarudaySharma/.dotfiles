@@ -48,7 +48,7 @@ return {
                 terminal_colors = true,
                 cache = false,
             })
-            -- ColorMyPencils("cyberdream")
+            ColorMyPencils("cyberdream")
         end
 
     },
@@ -96,7 +96,7 @@ return {
                 terminal    = vim.fn.has("gui_running") == 1, -- bluoco colors are enabled in gui terminals per default.
                 guicursor   = true,
             })
-            ColorMyPencils("bluloco")
+            -- ColorMyPencils("bluloco")
         end,
     },
 }

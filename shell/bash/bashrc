@@ -1,0 +1,68 @@
+# Homebrew setup (custom location)
+export PATH="$HOME/homebrew/bin:$PATH"
+export HOMEBREW_PREFIX="$HOME/homebrew"
+export HOMEBREW_REPOSITORY="$HOME/homebrew"
+export HOMEBREW_CELLAR="$HOME/homebrew/Cellar"
+
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+export LANG="en_IN.UTF-8"
+source $HOME/.local/share/fonts/i_dev.sh
+
+#bind -s '"\C-f":"~/.dotfiles/tmux/tmux-sessionizer\n"'
+# bind -s '"\C-f":"\C-ubash -c '\''~/.dotfiles/tmux/tmux-sessionizer'\''\n"'
+# bind -s '"\C-o":"\C-ubash -c '\''tmux a'\''\n"'
+#bind -s '"\C-o":"tmux a"'
+
+# for golang
+export PATH=$PATH:/usr/local/go/bin
+
+## for rust
+# cmd : source "$HOME/.cargo/env" will write the line below to the bashrc
+. "$HOME/.cargo/env"
+
+# custom aliases
+alias nv='nvim .'
+alias ..='cd ..'
+alias ....='cd ../../'
+
+if [ -f ~/.fzf.bash ]; then
+  source ~/.fzf.bash
+fi
+
+# for persisting ssh-agent across different sessions
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+    #echo "Starting ssh-agent..."
+    (
+        umask 066
+        ssh-agent >"$SSH_ENV"
+    )
+    . "$SSH_ENV" >/dev/null
+    ssh-add ~/.ssh/github-ed25519 > /dev/null
+}
+
+# Load ssh-agent settings
+if [ -f "$SSH_ENV" ]; then
+    . "$SSH_ENV" >/dev/null
+    # Verify if the agent is running, if not, start it
+    if ! pgrep -u "$USER" ssh-agent >/dev/null; then
+        start_agent
+    fi
+else
+    start_agent
+fi
+
+export PATH="$PATH:~/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/Users/harudaylnu/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME="/Users/harudaylnu/homebrew/opt/openjdk"
+alias lua=luajit
+
+
+
