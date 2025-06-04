@@ -1,0 +1,19 @@
+format = "$character$directory$git_branch "
+
+[directory]
+format = "[$path]($style)"
+style = "bold cyan"
+truncate_to_repo = false
+
+[git_branch]
+format = ' [git:\([($branch)](bold  #FF5733)\)](bold #C3B1E1)'
+# format = ' [git:\(]($git_style)[$branch]($branch_style)[\)]($bracket_style)'
+# git_style = "purple"
+# branch_style = "red"
+# bracket_style = "purple"
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+#5D3FD3
