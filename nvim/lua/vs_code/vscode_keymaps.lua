@@ -1,3 +1,5 @@
+-- NOTE: these keymaps are to be used with vscode-neovim extension in vscode to have a nvim like experience
+
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
