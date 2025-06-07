@@ -1,0 +1,41 @@
+{
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": true,
+  "workbench.editor.showTabs": "multiple",
+  "vim.enableNeovim": true,
+  "vim.neovimConfigPath": "~/.config/nvim/init.lua",
+  "vim.neovimPath": "/Users/harudaylnu/homebrew/bin/nvim",
+  "vim.neovimUseConfigFile": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "oil-code.disableVimKeymaps": true,
+  "workbench.startupEditor": "none",
+  "editor.fontFamily": "UbuntuMono Nerd Font Mono",
+  "editor.cursorStyle": "block-outline",
+  "vim.commandLineModeKeyBindings": [],
+  "workbench.colorTheme": "Aura Dark",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<C-c>"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-c>"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<C-c>"],
+      "after": ["<Esc>"]
+    }
+  ],
+}
+

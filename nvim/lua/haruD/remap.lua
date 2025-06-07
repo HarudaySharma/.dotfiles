@@ -46,3 +46,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/haruD/<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
+
+-- neotree
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle right<CR>")
