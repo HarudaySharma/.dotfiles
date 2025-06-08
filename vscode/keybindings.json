@@ -110,7 +110,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus)"
   },
   {
-    "key": "space v c a",
+    "key": "space c a",
     "command": "editor.action.codeAction",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
@@ -130,17 +130,12 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space v r n",
+    "key": "space c r",
     "command": "editor.action.rename",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space v r r",
-    "command": "editor.action.goToReferences",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "space v s",
+    "key": "space c s",
     "command": "workbench.action.gotoSymbol",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
@@ -186,11 +181,6 @@
     "args": {
       "commands": ["workbench.view.scm", "workbench.scm.focus"]
     }
-  },
-  {
-    "key": "ctrl-n",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
 
   // File Explorer
@@ -304,12 +294,13 @@
   // Toggle the bottom panel (works everywhere)
   {
     "key": "space w",
-    "command": "workbench.action.togglePanel"
+    "command": "workbench.action.togglePanel",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   // Toggle terminal (works everywhere)
   {
     "key": "space t",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   }
 ]
-
