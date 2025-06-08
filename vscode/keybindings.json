@@ -83,12 +83,12 @@
   },
 
   {
-    "key": "s h",
+    "key": "space s h",
     "command": "workbench.action.splitEditor",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "s v",
+    "key": "space s v",
     "command": "workbench.action.splitEditorDown",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
@@ -105,7 +105,12 @@
 
   // Coding
   {
-    "key": "space v a",
+    "key": "space f",
+    "command": "editor.action.formatDocument",
+    "when": "vim.mode == 'Normal' && (editorTextFocus)"
+  },
+  {
+    "key": "space v c a",
     "command": "editor.action.codeAction",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
@@ -125,8 +130,13 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space v r",
+    "key": "space v r n",
     "command": "editor.action.rename",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space v r r",
+    "command": "editor.action.goToReferences",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
@@ -274,7 +284,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped'"
   },
 
-  // CTRL+C behaving as ESC for reference window
+  // CTRL+C behaving as ESC
   {
     "key": "ctrl+c",
     "command": "cancel",
@@ -289,6 +299,17 @@
     "key": "ctrl+c",
     "command": "closeReferenceSearch",
     "when": "inReferenceSearch"
+  },
+
+  // Toggle the bottom panel (works everywhere)
+  {
+    "key": "space w",
+    "command": "workbench.action.togglePanel"
+  },
+  // Toggle terminal (works everywhere)
+  {
+    "key": "space t",
+    "command": "workbench.action.terminal.toggleTerminal"
   }
 ]
 
