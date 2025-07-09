@@ -25,6 +25,27 @@ return {
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
 
+        require('lspconfig').angularls.setup {}
+        -- require('lspconfig').angularls.setup {
+        --     cmd = {
+        --         "ngserver",
+        --         "--stdio",
+        --         "--tsProbeLocations",
+        --         ".",    -- optional: current dir for project-level TS versions
+        --         "--ngProbeLocations",
+        --         "."     -- optional: current dir for Angular versions
+        --     },
+        --     on_new_config = function(new_config, new_root_dir)
+        --         new_config.cmd = {
+        --             "ngserver",
+        --             "--stdio",
+        --             "--tsProbeLocations",
+        --             new_root_dir,
+        --             "--ngProbeLocations",
+        --             new_root_dir
+        --         }
+        --     end,
+        -- }
 
         require("fidget").setup({})
         require("mason").setup({
@@ -42,6 +63,7 @@ return {
                 "eslint",
                 "gopls",
                 "html",
+                "jdtls",
                 -- "markdown_oxide",
                 -- "markdownlint-cli2",
                 -- "tsserver",
@@ -56,6 +78,8 @@ return {
 
                 zls = function()
                     local lspconfig = require("lspconfig")
+
+
                     lspconfig.zls.setup({
                         root_dir = lspconfig.util.root_pattern(".git", "build.zig", "zls.json"),
                         settings = {
@@ -105,9 +129,9 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
-                { name = 'path' },
-                { name = 'buffer' },
-            })
+                    { name = 'path' },
+                    { name = 'buffer' },
+                })
         })
         vim.diagnostic.config({
             -- update_in_insert = true,
@@ -119,6 +143,11 @@ return {
                 header = "",
                 prefix = "",
             },
+            virtual_text = true,      -- show diagnostics as inline text
+            signs = true,             -- show diagnostics as gutter signs
+            underline = true,         -- underline the problematic text
+            update_in_insert = false, -- don't update while typing (optional)
+            -- severity_sort = true,     -- sort by severity
         })
     end
 }

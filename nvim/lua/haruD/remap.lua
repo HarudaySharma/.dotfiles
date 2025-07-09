@@ -48,4 +48,4 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 
 -- neotree
-vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle right<CR>")
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree filesystem reveal toggle right<CR>")
