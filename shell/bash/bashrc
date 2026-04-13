@@ -35,13 +35,19 @@ fi
 SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
-    #echo "Starting ssh-agent..."
     (
         umask 066
         ssh-agent >"$SSH_ENV"
     )
     . "$SSH_ENV" >/dev/null
-    ssh-add ~/.ssh/github-ed25519 > /dev/null
+}
+
+function add_ssh_keys {
+    ssh-add -l &>/dev/null
+    if [ "$?" != "0" ]; then
+        ssh-add ~/.ssh/bit_bucket_id_ed25519 &> /dev/null
+        ssh-add ~/.ssh/github-ed25519 &> /dev/null
+    fi
 }
 
 # Load ssh-agent settings
@@ -55,14 +61,60 @@ else
     start_agent
 fi
 
+# Only add keys if they're not already loaded
+add_ssh_keys
+
+
 export PATH="$PATH:~/.local/bin"
 
+# Lazy load NVM (saves ~0.223s on startup)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm() {
+    unset -f nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    nvm "$@"
+}
+
+# Lazy load node, npm, npx
+for cmd in node npm npx; do
+    eval "${cmd}() {
+        unset -f node npm npx nvm
+        [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"
+        [ -s \"$NVM_DIR/bash_completion\" ] && . \"$NVM_DIR/bash_completion\"
+        ${cmd} \"\$@\"
+    }"
+done
+
 export PATH="/Users/harudaylnu/homebrew/opt/openjdk/bin:$PATH"
-export JAVA_HOME="/Users/harudaylnu/homebrew/opt/openjdk"
+# export JAVA_HOME="/Users/harudaylnu/Library/Java/JavaVirtualMachines/corretto-17.0.15/Contents/Home/"
+export JAVA_HOME="/Users/harudaylnu/Library/Java/JavaVirtualMachines/corretto-11.0.28/Contents/Home/"
+#export JAVA_HOME="/Users/harudaylnu/Library/Java/JavaVirtualMachines/corretto-21.0.7/Contents/Home"
+#export JAVA_HOME="/Users/harudaylnu/homebrew/opt/openjdk"
+
 alias lua=luajit
 
+
+eval "$(starship init bash)"
+
+# Lazy load Angular CLI autocompletion (saves ~0.289s on startup)
+ng() {
+    unset -f ng
+    source <(command ng completion script)
+    ng "$@"
+}
+
+# Lazy load docker completion (saves ~0.021s on startup)
+docker() {
+    unset -f docker
+    source <(command docker completion bash)
+    docker "$@"
+}
+
+
+# nvim related
+export JDTLS_JVM_ARGS='-javaagent:/Users/harudaylnu/.local/share/nvim/mason/share/jdtls/lombok.jar'
+
+alias cls=clear
 
 

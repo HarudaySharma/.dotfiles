@@ -3,8 +3,9 @@ if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
-    # if not found in /usr/local/etc, try the brew --prefix location
-    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
-        . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-}
+export PATH="/Users/harudaylnu/homebrew/opt/postgresql@17/bin:$PATH"
+
+# Load bash completion (keep for git)
+[[ -r "/Users/harudaylnu/homebrew/etc/profile.d/bash_completion.sh" ]] && \
+    . "/Users/harudaylnu/homebrew/etc/profile.d/bash_completion.sh"
+. "/Users/harudaylnu/.local/share/bob/env/env.sh"
