@@ -19,13 +19,14 @@ return {
     config = function()
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
+        local compare = cmp.config.compare
         local capabilities = vim.tbl_deep_extend(
             "force",
             {},
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
 
-        require('lspconfig').angularls.setup {}
+        vim.lsp.config('angularls', {})
         -- require('lspconfig').angularls.setup {
         --     cmd = {
         --         "ngserver",
@@ -63,7 +64,7 @@ return {
                 "eslint",
                 "gopls",
                 "html",
-                "jdtls",
+                -- "jdtls",
                 -- "markdown_oxide",
                 -- "markdownlint-cli2",
                 -- "tsserver",
@@ -71,17 +72,14 @@ return {
             handlers = {
 
                 function(server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup {
+                    vim.lsp.config(server_name, {
                         capabilities = capabilities
-                    }
+                    })
                 end,
 
                 zls = function()
-                    local lspconfig = require("lspconfig")
-
-
-                    lspconfig.zls.setup({
-                        root_dir = lspconfig.util.root_pattern(".git", "build.zig", "zls.json"),
+                    vim.lsp.config('zls', {
+                        root_markers = {".git", "build.zig", "zls.json"},
                         settings = {
                             zls = {
                                 enable_inlay_hints = true,
@@ -94,8 +92,7 @@ return {
                     vim.g.zig_fmt_autosave = 0
                 end,
                 ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
+                    vim.lsp.config('lua_ls', {
                         capabilities = capabilities,
                         settings = {
                             Lua = {
@@ -105,7 +102,7 @@ return {
                                 }
                             }
                         }
-                    }
+                    })
                 end,
 
             }
@@ -127,11 +124,22 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
+                { name = "jupynium", priority = 1000 },  -- consider higher priority than LSP
                 { name = 'luasnip' }, -- For luasnip users.
             }, {
                     { name = 'path' },
                     { name = 'buffer' },
                 })
+            ,
+            sorting = {
+                priority_weight = 1.0,
+                comparators = {
+                    compare.score,            -- Jupyter kernel completion shows prior to LSP
+                    compare.recently_used,
+                    compare.locality,
+                    -- ...
+                },
+            },
         })
         vim.diagnostic.config({
             -- update_in_insert = true,

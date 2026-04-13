@@ -13,8 +13,8 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "10jzz")
+vim.keymap.set("n", "<C-u>", "10kzz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -48,4 +48,4 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 
 -- neotree
-vim.keymap.set("n", "<leader>e", "<cmd>Neotree filesystem reveal toggle right<CR>")
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")

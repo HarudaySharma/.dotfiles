@@ -4,4 +4,8 @@ if vim.g.vscode then
 else
     require("haruD")
     vim.cmd('source $HOME/.config/nvim/.vimrc')
+    -- vim.schedule(function()
+    --     require("nvim-tree.api").tree.close()
+    --     vim.cmd("Explore")
+    -- end)
 end

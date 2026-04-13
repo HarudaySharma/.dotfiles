@@ -48,7 +48,7 @@ return {
                 terminal_colors = true,
                 cache = false,
             })
-            ColorMyPencils("cyberdream")
+            -- ColorMyPencils("cyberdream")
         end
 
     },
@@ -99,4 +99,33 @@ return {
             -- ColorMyPencils("bluloco")
         end,
     },
+    {
+        "olimorris/onedarkpro.nvim",
+        priority = 1000, -- Ensure it loads first
+        config = function()
+            require("onedarkpro").setup({
+                options = {
+                    transparency = true, -- Use a transparent background?
+                }
+            })
+            -- ColorMyPencils('onedark_dark')
+        end
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        config = function()
+            require("catppuccin").setup({
+                transparent_background = false, -- disables setting the background color.
+                float = {
+                    transparent = true, -- enable transparent floating windows
+                    solid = true, -- use solid styling for floating windows, see |winborder|
+                },
+            })
+
+            ColorMyPencils('catppuccin')
+        end
+    }
+
 }
